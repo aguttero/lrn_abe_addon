@@ -1,0 +1,5 @@
+# Private files
+znotes_private/
+
+# Other files
+.DS_Store
