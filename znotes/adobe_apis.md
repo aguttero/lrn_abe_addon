@@ -27,7 +27,7 @@ https://www.youtube.com/watch?v=kSq4ykQGOdo
 https://www.youtube.com/watch?v=HHnX5o8CxHU
 
 ### Requirements
-NodeJs V16+ - Runtime environment. Runs JS ouside of a browser
+NodeJs v18+ - Runtime environment. Runs JS ouside of a browser
 NPM v8+ - Node Package Manager
 Adobe express Account
 
