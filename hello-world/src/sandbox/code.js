@@ -28,7 +28,7 @@ function start() {
             // Add the rectangle to the document.
             const insertionParent = editor.context.insertionParent;
             insertionParent.children.append(rectangle);
-        }
+        },
     };
 
     // Expose `sandboxApi` to the UI runtime.
