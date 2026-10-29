@@ -1,14 +1,53 @@
-## YouTube link
-https://www.youtube.com/watch?v=kSq4ykQGOdo
-https://developer.adobe.com/express/add-ons/docs/guides/getting-started/developer-journey
+# framework
+2026 10
+Node lts: v24.22.1
+npm v11.19.1
+nvm v0.40.4
 
-## requirements
+## requirements 2026 10
 - Node + npm / NodeJs v18+
 - Adobe Express account
+
+## nvm commands
+sh: nvm --help
+sh: nvm ls (list available versions)
+sh: nvm uninstall <version>
+sh: nvm install --lts
+sh: nvm use --lts
+
+## config folder
+`$NVM_DIR` folder (usually `~/.nvm`)
+
+
+
+## YouTube link
+https://www.youtube.com/watch?v=kSq4ykQGOdo
+
+## documentation
+https://developer.adobe.com/express/add-ons/docs/guides/getting-started/developer-journey
+https://developer.adobe.com/express/add-ons/docs/guides/getting-started/hello-world
+
+### Code Playground
+https://www.adobe.com/go/addon-playground
+https://developer.adobe.com/express/add-ons/docs/guides/getting-started/hello-world
+
+### How to guides and available APIs
+https://developer.adobe.com/express/add-ons/docs/guides/learn/how-to/
+
+### Complete project tutorials
+https://developer.adobe.com/express/add-ons/docs/guides/learn/how-to/#complete-projects
+
+## distribution
+https://developer.adobe.com/express/add-ons/docs/guides/build/distribute/
+- submission guidelines
+- private or public listing
+- publisher profile
 
 ## Hello world example
 1. Setup local web dev environment:
 - sh: npx @adobe/create-ccweb-add-on hello-world
+- sh: npx @adobe/create-ccweb-add-on hello-world --template javascript-with-document-sandbox
+
 - ignore warnings
 - analytics: no
 - start with javascript
@@ -31,8 +70,8 @@ https://developer.adobe.com/express/add-ons/docs/guides/getting-started/develope
 - click Your add-ons tab
 - on Add-on Development section > turn on Add-on testing
 - add dev server url from terminal log > connect
-- 
-
+- restart chrome if not working need to accept open apps dialog box
+ 
 
 ### success log:
 Success! Created hello-world at /Users/alejandroguttero/code_imac/lrn_abe_addon/hello-world.
@@ -92,3 +131,54 @@ Give Fix 1 a try first, as it solves this problem for 95% of developers!
 Let me know:
 • Did enabling that Chrome flag get the add-on to load?
 • Which web browser are you currently using?
+
+## Basic add-on structure
+Every Adobe Express add-on has these essential files:
+
+* manifest.json - Tells Adobe Express about your add-on
+* index.html - Your add-on's user interface
+* index.js - Your add-on's logic
+
+* The simplest add-on
+Plain JavaScript Template (No Build)
+This is the absolute simplest structure - no build tools, no document manipulation:
+
+my-addon/
+├── src/
+│   ├── index.html       # Your UI
+│   ├── index.js         # Your UI logic
+│   └── manifest.json    # Configuration
+├── tsconfig.json        # For IDE support only
+└── README.md
+
+
+* The Adobe Express Add-on Architecture
+
+Unlike a traditional desktop UXP plugin, an Adobe Express add-on splits its architecture into two distinct layers to protect the cloud-based web application:
+┌─────────────────────────────────────────────────────────────┐
+│                      Adobe Express Host                     │
+│                                                             │
+│   ┌────────────────────────┐       ┌────────────────────┐   │
+│   │       iframe UI        │◄─────►│  Document Sandbox  │   │
+│   │                        │       │                    │   │
+│   │ (HTML / React / CSS)   │ Bridge│ (Express Doc SDK)  │   │
+│   │ Complete Web APIs      │       │ No DOM access      │   │
+│   └────────────────────────┘       └────────────────────┘   │
+└─────────────────────────────────────────────────────────────┘
+
+## creating a project
+
+1. Las dependencias base (Automáticas)
+
+No necesitas adivinarlas ni escribirlas a mano. Adobe provee una herramienta de terminal que genera el archivo package.json con todo lo necesario para arrancar. Solo debes ejecutar en tu terminal:
+
+sh: npm create @adobe/ccweb-add-on@latest
+
+## Grid add-on Tutorial
+https://developer.adobe.com/express/add-ons/docs/guides/learn/how-to/tutorials/grids-addon
+https://github.com/AdobeDocs/express-add-on-samples/tree/main/document-sandbox-samples/express-grids-addon/
+
+1. git clone https://github.com/AdobeDocs/express-add-on-samples.git
+2. cd to grids-design-start
+3. sh: npm install && npm run build && npm run start
+4.

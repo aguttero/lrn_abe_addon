@@ -3,3 +3,7 @@ znotes_private/
 
 # Other files
 .DS_Store
+
+# adobe files
+dist/
+node_modules/
