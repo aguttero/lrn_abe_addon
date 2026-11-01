@@ -181,4 +181,13 @@ https://github.com/AdobeDocs/express-add-on-samples/tree/main/document-sandbox-s
 1. git clone https://github.com/AdobeDocs/express-add-on-samples.git
 2. cd to grids-design-start
 3. sh: npm install && npm run build && npm run start
-4.
+
+### create a shape > SDK reference:
+SDK References > Document Sandbox > Document APIs > Classes > Editor > Methods > createRectangle()
+https://developer.adobe.com/express/add-ons/docs/references/document-sandbox/document-apis/classes/editor
+https://developer.adobe.com/express/add-ons/docs/references/document-sandbox/document-apis/classes/editor#createrectangle
+
+import { editor, colorUtils, constants } from "express-document-sdk";
+
+Rectangle node reference: check Accesors
+https://developer.adobe.com/express/add-ons/docs/references/document-sandbox/document-apis/classes/rectangle-node
