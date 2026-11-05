@@ -27,6 +27,97 @@ https://www.youtube.com/watch?v=kSq4ykQGOdo
 https://developer.adobe.com/express/add-ons/docs/guides/getting-started/developer-journey
 https://developer.adobe.com/express/add-ons/docs/guides/getting-started/hello-world
 
+## UXP Overview:
+https://www.davidebarranca.com/
+* Youtube: Adobe UXP: things you need to know #1
+https://www.youtube.com/watch?v=zAOUBpDjc1Q
+
+* Guide about what to learn and where to start:
+https://www.youtube.com/watch?v=PjqhwGGTCjE - UXP Landscape guide
+scripting: automate with code things the app can do via the human interface
+DOM : 70% of UI features can be reached
+Javascript 
+
+## UXP general Notes
+* Things you can build
+1. UXP scripts
+  - Simpler utilities, with optional UI
+2. UXP addons/plugins
+  - One or more Panel, with simple or fancy UIs
+  - One or more commands.
+  - Hybrid Plugin (with additional C++ routines)
+
+* Need to learn:
+UXP API 
+- Panels, commands, logic, etc
+Host App API:
+- Scripting, special features (ie: Imaging)
+
+Must:
+JS:
+  - ES6
+HTML, CSS:
+  - Subsets 
+  - Spectrum (Adobe)
+Host Application Scripting
+  - Beware of the Alchemist copy/paste trap
+
+Eventually:
+JS Frameworks
+  - React (recommended). Then Vue, Svelte
+  - Vanilla JavaScript is enough
+TypeScript
+Fancy dev tools 
+  - Bundlers (WebPack) etc
+
+Not really needed:
+Installers
+  - Notarization, code signing, etc
+Node.js
+  - Will arise if/when using JS frameworks anyway
+C++
+
+### Monetisation
+* Adobe Creative Cloud Marketplace
+- Huge audience, built-in licensing (against adobe-id for plugin usage)
+- Less customisable, requires approval, 10% cut on sales
+
+* Other Marketplaces
+- IMHO not reco- hyper-crowded, non-curated
+
+* Selling on your own
+- Merchants of record (Gumroad, FastSpring, Paddle ) / FastSpring is the one that Adobe uses
+
+### Training
+UXP / ReactJS - Adobe UXP Plugins development
+- Mostly about UXP + React / very little Photoshop
+
+Professional Photoshop UXP
+
+developer.adobe.com
+
+### Tools
+- IDE
+- Adobe UXP Dev tool
+- PS: Alchemist plugin by Jaroslav Bereza
+- UXP Quickstart guide
+- UXP API
+- Photoshop API
+- Photoshop UXP Script samples
+- Photoshop UXP plugin samples
+- UXP for Adobe InDesign
+- InDesign UXP script samples
+
+
+### UXP Scripts
+PSJS - Photoshop
+ESJS - Indesign
+UI - Modal dialog
+
+
+
+
+
 ### Code Playground
 https://www.adobe.com/go/addon-playground
 https://developer.adobe.com/express/add-ons/docs/guides/getting-started/hello-world
@@ -178,6 +269,7 @@ sh: npm create @adobe/ccweb-add-on@latest
 https://developer.adobe.com/express/add-ons/docs/guides/learn/how-to/tutorials/grids-addon
 https://github.com/AdobeDocs/express-add-on-samples/tree/main/document-sandbox-samples/express-grids-addon/
 
+### Setup
 1. git clone https://github.com/AdobeDocs/express-add-on-samples.git
 2. cd to grids-design-start
 3. sh: npm install && npm run build && npm run start
@@ -191,3 +283,9 @@ import { editor, colorUtils, constants } from "express-document-sdk";
 
 Rectangle node reference: check Accesors
 https://developer.adobe.com/express/add-ons/docs/references/document-sandbox/document-apis/classes/rectangle-node
+
+### UI Spectrum Web Components
+- Already imported > Verify in package.json and ui/index.js
+- package.json should npm install the ones you need (validate with npm list)
+- import @spectrum components to ui/index.js
+- add ui html code to index.html
