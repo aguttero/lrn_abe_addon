@@ -274,6 +274,29 @@ https://github.com/AdobeDocs/express-add-on-samples/tree/main/document-sandbox-s
 2. cd to grids-design-start
 3. sh: npm install && npm run build && npm run start
 
+#### npm list to validate
+alejandroguttero@alejandros-iMac grids-design-start % npm list
+grids@1.0.2 /Users/alejandroguttero/code_imac/lrn_abexp_tut_202610/grids-design-start
+├── @adobe/ccweb-add-on-scripts@3.11.0
+├── @babel/core@7.29.7
+├── @babel/preset-env@7.29.7
+├── @spectrum-web-components/action-button@1.12.5
+├── @spectrum-web-components/button-group@1.12.5
+├── @spectrum-web-components/button@1.12.5
+├── @spectrum-web-components/field-label@1.12.5
+├── @spectrum-web-components/number-field@1.12.5
+├── @spectrum-web-components/slider@1.12.5
+├── @spectrum-web-components/swatch@1.12.5
+├── @spectrum-web-components/theme@1.12.5
+├── @types/adobe__ccweb-add-on-sdk@1.3.0
+├── babel-loader@10.1.1
+├── copy-webpack-plugin@13.0.1
+├── css-loader@7.1.5
+├── html-webpack-plugin@5.6.8
+├── style-loader@4.0.0
+├── webpack-cli@6.0.1
+└── webpack@5.112.2
+
 ### create a shape > SDK reference:
 SDK References > Document Sandbox > Document APIs > Classes > Editor > Methods > createRectangle()
 https://developer.adobe.com/express/add-ons/docs/references/document-sandbox/document-apis/classes/editor
