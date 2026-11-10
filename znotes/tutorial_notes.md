@@ -308,7 +308,12 @@ Rectangle node reference: check Accesors
 https://developer.adobe.com/express/add-ons/docs/references/document-sandbox/document-apis/classes/rectangle-node
 
 ### UI Spectrum Web Components
+https://developer.adobe.com/express/add-ons/docs/guides/build/design/implementation-guide
 - Already imported > Verify in package.json and ui/index.js
 - package.json should npm install the ones you need (validate with npm list)
 - import @spectrum components to ui/index.js
 - add ui html code to index.html
+- Note about Color Picker:
+  - The only tricky UI bit worth mentioning here is relative to the color pickers. SWC features a variety of color-related components (Color Area, Color Handle, Color Loupe, Color Slider) but not an actual picker. This add-on implements it via a <sp-swatch> for the UI and Adobe Express's built-in Color Picker API, which provides advanced features like recommended swatches, themes, library access, eyedropper tool, and brand colors.
+  - https://developer.adobe.com/express/add-ons/docs/references/ui-components/color-picker
+-
