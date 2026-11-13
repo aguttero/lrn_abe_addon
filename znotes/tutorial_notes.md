@@ -1,4 +1,4 @@
-# framework
+## framework
 2026 10
 Node lts: v24.22.1
 npm v11.19.1
@@ -26,6 +26,12 @@ https://www.youtube.com/watch?v=kSq4ykQGOdo
 ## documentation
 https://developer.adobe.com/express/add-ons/docs/guides/getting-started/developer-journey
 https://developer.adobe.com/express/add-ons/docs/guides/getting-started/hello-world
+
+## Adobe Community
+https://www.adobe.com/community
+
+## Discord Channel
+https://discord.com/channels/1093561069689110568/1093561070460866671
 
 ## UXP Overview:
 https://www.davidebarranca.com/
@@ -134,8 +140,10 @@ https://developer.adobe.com/express/add-ons/docs/guides/build/distribute/
 - private or public listing
 - publisher profile
 
-## Hello world example
+# Hello world example
+## Setup
 1. Setup local web dev environment:
+- in local root projects directory run: (scaffolding creates a new dir with the new project name: hello-world)
 - sh: npx @adobe/create-ccweb-add-on hello-world
 - sh: npx @adobe/create-ccweb-add-on hello-world --template javascript-with-document-sandbox
 
@@ -265,7 +273,7 @@ No necesitas adivinarlas ni escribirlas a mano. Adobe provee una herramienta de 
 
 sh: npm create @adobe/ccweb-add-on@latest
 
-## Grid add-on Tutorial
+# Grid add-on Tutorial
 https://developer.adobe.com/express/add-ons/docs/guides/learn/how-to/tutorials/grids-addon
 https://github.com/AdobeDocs/express-add-on-samples/tree/main/document-sandbox-samples/express-grids-addon/
 
@@ -316,4 +324,24 @@ https://developer.adobe.com/express/add-ons/docs/guides/build/design/implementat
 - Note about Color Picker:
   - The only tricky UI bit worth mentioning here is relative to the color pickers. SWC features a variety of color-related components (Color Area, Color Handle, Color Loupe, Color Slider) but not an actual picker. This add-on implements it via a <sp-swatch> for the UI and Adobe Express's built-in Color Picker API, which provides advanced features like recommended swatches, themes, library access, eyedropper tool, and brand colors.
   - https://developer.adobe.com/express/add-ons/docs/references/ui-components/color-picker
+
+# VideoTutorial: Building UIs using Adobe's Spectrum Design System
+https://www.youtube.com/watch?v=5PA4KEN4JdQ
+
+# Communication API Tutorial
+https://developer.adobe.com/express/add-ons/docs/guides/learn/how-to/tutorials/stats-addon
+
+## Setup
+- cd to root projects director
+- scaffold will create a new folder for the new project:
+- sh: npx @adobe/create-ccweb-add-on comm-api-v1 --template javascript-with-document-sandbox
+- edit project name (if needed) in package.json, package-lock.json and src/manifest.json
+- cd to comm-api-vi folder
+- install dependencies (if it is not a new project from scratch)
+  - sh: npm install xxxx
+- build the app  (creates comm-api-v1/dist folder and files )
+  - sh: npm run build
+  - sh: npm run start
+  - read log ok
+- Test in express - New empty page > Add-ons > "add-on testing" should see the plugin and sample create rectangle button
 -
